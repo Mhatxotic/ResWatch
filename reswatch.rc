@@ -1,0 +1,51 @@
+/* ========================================================================= */
+/* RESOLUTION WATCHER                                    © MASHU DESIGN 2009 */
+/* ========================================================================= */
+#include "ResWatch.Cpp"                // Contains version information
+#include <Windows.H>                   // Control defines
+/* ========================================================================= */
+1 BITMAP ResWatch.Bmp
+/* ------------------------------------------------------------------------- */
+1 ICON ResWatch.Ico
+/* ------------------------------------------------------------------------- */
+1 DIALOGEX 0, 0, 193, 122
+STYLE DS_FIXEDSYS | DS_NOIDLEMSG | WM_SETFOCUS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+EXSTYLE WS_EX_TOPMOST | WS_EX_APPWINDOW
+FONT 8, "MS SHELL DLG"
+{
+   CONTROL "&Not now",   1, BUTTON, BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 5, 46,  54, 14
+   CONTROL "&Do it now", 2, BUTTON, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP,   69, 46,  54, 14
+   CONTROL "&About",     3, BUTTON, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP,  133, 46,  54, 14
+   CONTROL 1,            4, STATIC, SS_BITMAP | SS_SUNKEN | WS_CHILD | WS_VISIBLE,         5, 86, 182, 31
+   CONTROL "",           5, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE,       5, 26, 182, 14
+   CONTROL "",          10, STATIC, SS_CENTER | WS_CHILD | WS_VISIBLE,                     5,  4, 182, 18
+   CONTROL "",          11, STATIC, SS_CENTER | WS_CHILD | WS_VISIBLE | WS_DISABLED,       5, 65, 182, 18
+}
+/* ------------------------------------------------------------------------- */
+1 VERSIONINFO
+PRODUCTVERSION VS_MAJOR,VS_MINOR,VS_BUILD,VS_REVISION
+FILEVERSION VS_MAJOR,VS_MINOR,VS_BUILD,VS_REVISION
+FILEOS VOS__WINDOWS32
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "08090000"
+    {
+      VALUE "CompanyName",      "MhatXotic Design"
+      VALUE "FileDescription",  "ResWatcher for Windows"
+      VALUE "FileVersion",      "Windows® XP, Vista and Seven"
+      VALUE "LegalCopyright",   "© MhatXotic Design. All rights reserved."
+      VALUE "OriginalFilename", "ResWatch.Exe"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x0809 0x0000
+  }
+}
+/* ------------------------------------------------------------------------- */
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ResWatch.Man
+/* ========================================================================= */
+/* EOF                                                                   EOF */
+/* ========================================================================= */
